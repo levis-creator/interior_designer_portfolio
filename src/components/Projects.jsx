@@ -32,7 +32,7 @@ const Projects = () => {
   };
   return (
     <motion.div
-      className="grid grid-cols-1 gap-2"
+      className="grid grid-cols-1 md:grid-cols-2 gap-2"
       variants={projects}
       initial="hidden"
       animate="show"

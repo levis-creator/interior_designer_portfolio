@@ -32,7 +32,7 @@ const HomeCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-20 z-10 w-full ">
+      <div className="absolute bottom-20 z-10 w-full px-3">
         <p className="text-center text-lg italic mx-auto ">
           {content[0].carousel_text}
         </p>

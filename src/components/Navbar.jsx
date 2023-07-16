@@ -1,4 +1,5 @@
 "use client";
+import { BiMenuAltLeft } from "react-icons/bi";
 import { menuItems } from "@/api/menuItems";
 import useDisplay from "@/hook/useDisplay";
 import LayerAnimation from "@/templates/LayerAnimation";
@@ -87,12 +88,17 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <header
-        className={`w-full text-white px-3 py-2 fixed z-20 ${
+        className={`w-full text-white px-3 sm:px-6 py-2 fixed z-20 ${
           !changeNav ? "bg-black" : "bg-transparent"
         } z-10`}
       >
         <nav className="w-full">
           <div className="flex w-full justify-between items-center">
+            <NavButtonAnimation className="hidden sm:flex">
+              <button onClick={handleOpen} className="text-4xl">
+                <BiMenuAltLeft />
+              </button>
+            </NavButtonAnimation>
             <AnimatePresence>
               <LogoAnimation forward={true}>
                 <Link href={"/"}>
@@ -107,11 +113,18 @@ const Navbar = () => {
                 </Link>
               </LogoAnimation>
             </AnimatePresence>
-            <NavButtonAnimation>
+            <NavButtonAnimation className="sm:hidden">
               <button onClick={handleOpen} className="text-4xl">
                 <BiMenuAltRight />
               </button>
             </NavButtonAnimation>
+            <LogoAnimation >
+              <Link href={"/contact-me"} className="hidden sm:flex">
+                <button className=" text-white rounded-full  px-4 py-2 outline ">
+                  contact
+                </button>
+              </Link>
+            </LogoAnimation>
           </div>
         </nav>
       </header>

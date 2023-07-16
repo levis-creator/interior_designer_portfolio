@@ -30,9 +30,9 @@ export default function Home() {
 
       <section
         id="about"
-        className="max-h-screenh-screen bg-gradient-to-r from-slate-100 to-slate-200 pt-32 overflow-hidden"
+        className="max-h-screen bg-gradient-to-r from-slate-100 to-slate-200 pt-32 overflow-hidden"
       >
-        <div className="px-3 text-center leading-relaxed ">
+        <div className="px-3 sm:px-6 text-center leading-relaxed ">
           <Whois />
           <p className="text-center">{content[0].whoIs}</p>
           <Link href={"/about"}>
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </section>
       <section id="works" className="h-screen pt-28">
-        <div className="space-y-6 px-3 pb-2">
+        <div className="space-y-6 px-3 pb-2 sm:px-6">
           <h2 className="font-bold text-5xl text-center ">Works</h2>
           <p className="text-center">{content[1].works_paragraph}</p>
         </div>

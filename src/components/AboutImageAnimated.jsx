@@ -48,13 +48,13 @@ const AboutImageAnimated = ({ image, description }) => {
       animate="show"
     >
       <motion.div
-        className="h-72 w-2/3 rounded-3xl shadow-lg overflow-hidden"
+        className="h-72 w-2/3 sm:h-auto rounded-3xl shadow-lg overflow-hidden"
         variants={leftComponent}
       >
         <HomeSlideItem data={image} className="object-right-top" />
       </motion.div>
       <motion.div
-        className="absolute bg-white -bottom-16 w-72 right-0  rounded-2xl px-4 py-3 shadow-lg"
+        className="absolute bg-white -bottom-16 sm:right-6 w-72 right-0  rounded-2xl px-4 py-3 shadow-lg"
         variants={rightComponent}
       >
         <p>{description}</p>

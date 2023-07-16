@@ -11,7 +11,7 @@ const ProjectCarousel = () => {
     <Swiper
      slidesPerView={2}
      spaceBetween={15}
-     className='h-32'
+     className='h-32 sm:h-60'
      loop={true}
      >
         {carouselData.map((items, i)=>(

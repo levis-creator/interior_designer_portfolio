@@ -12,10 +12,10 @@ const About = () => {
         description={content[2].brief_description}
       />
     </div>
-      <div className="mt-20 leading-relaxed space-y-6 text-center">
+      <div className="mt-20 leading-relaxed space-y-6 text-center px-3 sm:px-6">
         <h2 className="font-bold text-5xl text-center ">About me</h2>
         <p className="text-center">{content[2].description}</p>
-        <Link href={"/about"}>
+        <Link href={"/contact-me"}>
             <button className="bg-black text-white px-8  py-2 rounded-md mt-10">
               Contact me
             </button>

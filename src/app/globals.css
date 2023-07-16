@@ -11,3 +11,7 @@
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
   color: white !important;
 }
+
+textarea {
+  resize: none;
+}
