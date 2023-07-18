@@ -21,8 +21,8 @@ const HomeCarousel = () => {
         modules={[Navigation, Autoplay]}
         navigation={true}
         autoplay={{
-          delay:3000,
-          disableOnInteraction:false
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         loop={true}
       >
@@ -32,26 +32,25 @@ const HomeCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-20 z-10 w-full px-3">
+      <div className="absolute bottom-20 z-10 w-full px-3   ">
         <p className="text-center text-lg italic mx-auto ">
           {content[0].carousel_text}
         </p>
       </div>
       <div className="text-3xl text-center w-full absolute bottom-0 z-10">
         <Link href={"#about"}>
-        <motion.button
-          initial={{ y: -10 }}
-          animate={{ y: 0 }}
-          transition={{
-            duration:1,
-            ease:"easeIn",
-            repeat:Infinity
-
-          }}
-          className=" mx-auto w-fit"
-        >
-          <BsChevronDown />
-        </motion.button>
+          <motion.button
+            initial={{ y: -10 }}
+            animate={{ y: 0 }}
+            transition={{
+              duration: 1,
+              ease: "easeIn",
+              repeat: Infinity,
+            }}
+            className=" mx-auto w-fit"
+          >
+            <BsChevronDown />
+          </motion.button>
         </Link>
       </div>
     </div>

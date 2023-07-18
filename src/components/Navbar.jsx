@@ -42,7 +42,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <LayerAnimation className="fixed top-0 bottom-0 right-0 left-0 bg-black text-white z-30">
-            <div className=" relative flex w-full items-center px-3 py-2 justify-between">
+            <div className=" relative flex w-full items-center px-3 sm:px-6 md:px-14  py-2 justify-between">
               <div className="flex-1">
                 <LogoAnimation className="mx-auto w-fit h-fit">
                   <Link href={"/"} onClick={handleOpen}>
@@ -88,44 +88,42 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <header
-        className={`w-full text-white px-3 sm:px-6 py-2 fixed z-20 ${
+        className={`w-full text-white px-3 sm:px-6 md:px-14 py-2 fixed z-20 ${
           !changeNav ? "bg-black" : "bg-transparent"
         } z-10`}
       >
-        <nav className="w-full">
-          <div className="flex w-full justify-between items-center">
-            <NavButtonAnimation className="hidden sm:flex">
-              <button onClick={handleOpen} className="text-4xl">
-                <BiMenuAltLeft />
-              </button>
-            </NavButtonAnimation>
-            <AnimatePresence>
-              <LogoAnimation forward={true}>
-                <Link href={"/"}>
-                  <Image
-                    src="/logo-white.png"
-                    alt="logo"
-                    width={0}
-                    height={0}
-                    className="w-auto h-16"
-                    unoptimized
-                  />
-                </Link>
-              </LogoAnimation>
-            </AnimatePresence>
-            <NavButtonAnimation className="sm:hidden">
-              <button onClick={handleOpen} className="text-4xl">
-                <BiMenuAltRight />
-              </button>
-            </NavButtonAnimation>
-            <LogoAnimation >
-              <Link href={"/contact-me"} className="hidden sm:flex">
-                <button className=" text-white rounded-full  px-4 py-2 outline ">
-                  contact
-                </button>
+        <nav className="flex w-full justify-between items-center">
+          <NavButtonAnimation className="hidden sm:flex">
+            <button onClick={handleOpen} className="text-4xl">
+              <BiMenuAltLeft />
+            </button>
+          </NavButtonAnimation>
+          <AnimatePresence>
+            <LogoAnimation forward={true} className="flex-1 sm:flex-initial">
+              <Link href={"/"}>
+                <Image
+                  src="/logo-white.png"
+                  alt="logo"
+                  width={0}
+                  height={0}
+                  className="w-auto h-16"
+                  unoptimized
+                />
               </Link>
             </LogoAnimation>
-          </div>
+          </AnimatePresence>
+          <NavButtonAnimation className="sm:hidden">
+            <button onClick={handleOpen} className="text-4xl">
+              <BiMenuAltRight />
+            </button>
+          </NavButtonAnimation>
+          <LogoAnimation>
+            <Link href={"/contact-me"} className="hidden sm:flex">
+              <button className=" text-white rounded-full  px-4 py-2 outline ">
+                contact
+              </button>
+            </Link>
+          </LogoAnimation>
         </nav>
       </header>
     </>

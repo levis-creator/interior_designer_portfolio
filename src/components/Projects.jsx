@@ -32,13 +32,19 @@ const Projects = () => {
   };
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 gap-2"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
       variants={projects}
       initial="hidden"
       animate="show"
     >
       {carouselData.map((items, i) => (
-        <motion.div className="relative " key={i} variants={project} whileInView={{ x:[-60, 0]}} whileHover={{scale:1.3}} >
+        <motion.div
+          className="relative "
+          key={i}
+          variants={project}
+          whileInView={{ x: [-60, 0] }}
+          whileHover={{ scale: 1.1 }}
+        >
           <HomeSlideItem data={items} />
           <div className="bottom-0 right-3 text-white absolute text-xl font-medium">
             {items.title}
